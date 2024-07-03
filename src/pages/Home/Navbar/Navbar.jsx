@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
 
     const navlinks = <>
-        <li><Link to='/'>Home</Link></li>
+        <li className="hover:text-cyan-900"><Link to='/'>Home</Link></li>
         <li><Link to='/'>All Tourists Spot</Link></li>
         <li><Link to='/'>Add Tourists Spot</Link></li>
         <li><Link to='/'>My List</Link></li>
@@ -11,7 +11,7 @@ const Navbar = () => {
 
     return (
         <div className="z-50 relative bg-transparent">
-            <div>
+            <div className="container mx-auto pt-6">
                 <div className="navbar ">
                     <div className="navbar-start">
                         <div className="dropdown">
@@ -31,19 +31,21 @@ const Navbar = () => {
                             </div>
                             <ul
                                 tabIndex={0}
-                                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                                className="menu menu-sm  dropdown-content text-white bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                                 {navlinks}
                             </ul>
                         </div>
                         <a className="btn btn-ghost text-xl text-white">Turismo</a>
                     </div>
                     <div className="navbar-center hidden lg:flex">
-                        <ul className="menu menu-horizontal px-1">
-                          {navlinks}
+                        <ul className="menu menu-horizontal px-1 text-white  text-lg">
+                            {navlinks}
                         </ul>
                     </div>
                     <div className="navbar-end">
-                        <a className="btn">Button</a>
+                        <Link to=''>
+                            <button className="btn hover:bg-white text-lg hover:text-[#1288B8] bg-[#1288B8] shadow-xl text-white px-6 border-none rounded-xl py-2 ">Register</button>
+                        </Link>
                     </div>
                 </div>
             </div>

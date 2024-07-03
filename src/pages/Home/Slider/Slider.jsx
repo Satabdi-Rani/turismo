@@ -13,16 +13,16 @@ const Slider = () => {
                     modules={[Navigation, Autoplay]}
                     spaceBetween={50}
                     slidesPerView={1}
-                    navigation
+                    // navigation
                     autoplay
                     onSlideChange={() => console.log('slide change')}
                     onSwiper={(swiper) => console.log(swiper)}
                 >
-                    <SwiperSlide><img className='h-[300px] w-full sm:h-[400px] md:h-[400px] lg:h-screen lg:w-full bg-cover bg-blend-overlay brightness-75' src="https://i.ibb.co/rppvBZG/view-world-monument-celebrate-world-heritage-day.jpg" alt="" />
+                    <SwiperSlide><img className='h-[300px] w-full sm:h-[400px] md:h-[400px] lg:h-screen lg:w-full bg-cover bg-blend-overlay brightness-75' src="https://i.ibb.co/1vd4rMj/beautiful-beach-view-koh-chang-island-seascape.jpg" alt="" /></SwiperSlide>
+                    <SwiperSlide><img className='h-[300px] w-full sm:h-[400px] md:h-[400px] lg:h-screen lg:w-full bg-cover bg-blend-overlay brightness-75' src="https://i.ibb.co/C9Y2VMN/amazing-autumn-scenery-santa-maddalena-village-with-church-colorful-trees-meadows-rising-sun-rays-do.jpg" alt="" />
                     </SwiperSlide>
                     <SwiperSlide><img className='h-[300px] w-full sm:h-[400px] md:h-[400px] lg:h-screen lg:w-full bg-cover bg-blend-overlay brightness-75' src="https://i.ibb.co/rppvBZG/view-world-monument-celebrate-world-heritage-day.jpg" alt="" /></SwiperSlide>
-                    <SwiperSlide><img className='h-[300px] w-full sm:h-[400px] md:h-[400px] lg:h-screen lg:w-full bg-cover bg-blend-overlay brightness-75' src="https://i.ibb.co/rppvBZG/view-world-monument-celebrate-world-heritage-day.jpg" alt="" /></SwiperSlide>
-                    <SwiperSlide><img className='h-[300px] w-full sm:h-[400px] md:h-[400px] lg:h-screen lg:w-full bg-cover bg-blend-overlay brightness-75' src="https://i.ibb.co/rppvBZG/view-world-monument-celebrate-world-heritage-day.jpg" alt="" /></SwiperSlide>
+                    <SwiperSlide><img className='h-[300px] w-full sm:h-[400px] md:h-[400px] lg:h-screen lg:w-full bg-cover bg-blend-overlay brightness-75' src="https://i.ibb.co/NjvfbCV/view-famous-arc-de-triomphe-paris-france.jpg" alt="" /></SwiperSlide>
                 </Swiper>
             </div>
             <div className='text-left z-10 absolute bg-[#160d0d9a] py-8 sm:py-12 xl:py-28 px-8 sm:px-12 xl:px-24 top-[200px] sm:top-[215px] lg:top-[320px] left-[100px] sm:left-[150px] lg:left-[320px] border-none rounded-lg  flex flex-col'>
