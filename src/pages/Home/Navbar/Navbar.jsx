@@ -43,10 +43,10 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="navbar-end flex flex-row gap-3">
-                        <Link to=''>
+                        <Link to='/login'>
                             <button className="btn hover:bg-white text-lg hover:text-[#1288B8] bg-[#1288B8] shadow-xl text-white px-6 border-none rounded-xl py-2 ">Login</button>
                         </Link>
-                        <Link to=''>
+                        <Link to='/register'>
                             <button className="btn hover:bg-white text-lg hover:text-[#1288B8] bg-[#1288B8] shadow-xl text-white px-6 border-none rounded-xl py-2 ">Register</button>
                         </Link>
                     </div>
