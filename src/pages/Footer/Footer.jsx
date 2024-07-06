@@ -12,14 +12,14 @@ const Footer = () => {
         <div className="bg-[#0F2454]">
             <div className="mx-auto container pt-20">
                 <div className="grid grid-cols-1 sm:grid-cols-3 border border-cyan-800 gap-10 text-white sm:px-12 py-8 ml-16 sm:ml-32 mr-16 sm:mr-40 mb-10">
-                    <div className="flex flex-row gap-4 border-b pb-8 pl-10 sm:pl-0 sm:pb-0 sm:border-r border-gray-600 sm:mr-16">
+                    <div className="flex flex-row gap-4  pb-8 pl-10 sm:pl-0 sm:pb-0 sm:border-r border-gray-600 sm:mr-16">
                         <MdWifiCalling3 className="bg-[#1288B8] text-white text-lg p-3 w-16 h-16 mt-1"></MdWifiCalling3>
                         <ul className="flex flex-col ml-3">
                             <li className="font-bold text-xl">Call us</li>
                             <li className="text-md mt-2">+1 123-456-0606</li>
                         </ul>
                     </div>
-                    <div className="flex flex-row gap-4 border-b pb-8 pl-10 sm:pl-0 sm:pb-0 sm:border-r border-gray-600 sm:mr-16">
+                    <div className="flex flex-row gap-4 pb-8 pl-10 sm:pl-0 sm:pb-0 sm:border-r border-gray-600 sm:mr-16">
                         <FaEnvelopeOpenText className="bg-[#1288B8] text-white text-lg p-3 w-16 h-16 mt-1"></FaEnvelopeOpenText>
                         <ul className="flex flex-col ml-3">
                             <li className="font-bold text-xl">Write to us</li>
