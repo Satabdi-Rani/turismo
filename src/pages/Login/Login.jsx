@@ -1,9 +1,16 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import Navbar from "../Home/Navbar/Navbar";
-import { FaGithub, FaGoogle} from "react-icons/fa";
+import { FaGithub, FaGoogle } from "react-icons/fa";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
+import Swal from 'sweetalert2'
+
 
 const Login = () => {
+    const { signInUser, googleSignIn, githubLogin } = useContext(AuthContext);
+    const [success, setSuccess] = useState('');
+    const navigate = useNavigate();
 
     const handleLogin = event => {
         event.preventDefault();
@@ -11,6 +18,74 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log(email, password);
+
+        // Email Sign in 
+        signInUser(email, password)
+            .then(result => {
+                console.log(result.user);
+                setSuccess(
+                    Swal.fire({
+                        title: "Congrats!",
+                        text: "You are logged in",
+                        icon: "success",
+                        showCancelButton: true,
+                        confirmButtonColor: "#3085d6",
+                        cancelButtonColor: "#d33",
+                        confirmButtonText: "Ok"
+                    })
+                )
+                navigate('/')
+            })
+            .catch(error => {
+                console.log(error)
+            })
+
+    }
+
+    // Google Login
+    const handleGoogleLogin = () => {
+        googleSignIn()
+            .then(result => {
+                console.log(result.user)
+                setSuccess(
+                    Swal.fire({
+                        title: "Congrats!",
+                        text: "You are logged in",
+                        icon: "success",
+                        showCancelButton: true,
+                        confirmButtonColor: "#3085d6",
+                        cancelButtonColor: "#d33",
+                        confirmButtonText: "Ok"
+                    })
+                )
+                navigate('/')
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }
+
+    // Github Login
+    const handleGithubLogin = () => {
+        githubLogin()
+        .then(result => {
+            console.log(result.user);
+            setSuccess(
+                Swal.fire({
+                    title: "Congrats!",
+                    text: "You are logged in",
+                    icon: "success",
+                    showCancelButton: true,
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                    confirmButtonText: "Ok"
+                })
+            )
+            navigate('/')
+        })
+        .catch(error => {
+            console.log(error);
+        })
     }
 
     return (
@@ -46,8 +121,8 @@ const Login = () => {
                         <div className="divider bg-[#FFFFFF] h-0  w-4/5 mx-auto text-white ">Or Login with</div>
                         <div className="mx-auto mb-6">
                             <div className="flex flex-row gap-4 text-lg  sm:mt-6 mb-4">
-                                <button className="border p-1 w-10 h-10 rounded-full bg-white text-blue-[#0F2454]"><FaGoogle className="ml-[5px] mt-0" /></button>
-                                <button className="border p-1 w-10 h-10 rounded-full bg-white text-blue-[#0F2454]"><FaGithub className="ml-[6px] mt-0" /></button>
+                                <button onClick={handleGoogleLogin} className="border p-1 w-10 h-10 rounded-full bg-white text-blue-[#0F2454]"><FaGoogle className="ml-[5px] mt-0" /></button>
+                                <button onClick={handleGithubLogin} className="border p-1 w-10 h-10 rounded-full bg-white text-blue-[#0F2454]"><FaGithub className="ml-[6px] mt-0" /></button>
                             </div>
                         </div>
                         {/* <hr className="w-4/5 mx-auto pb-6 mt-6 inline" /> <p className="text-white">sdbhchsd</p> */}
