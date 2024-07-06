@@ -11,22 +11,22 @@ const Footer = () => {
     return (
         <div className="bg-[#0F2454]">
             <div className="mx-auto container pt-20">
-                <div className="grid grid-cols-1 sm:grid-cols-3 border border-cyan-800 gap-10 text-white px-12 py-8 ml-32 mr-40 mb-10">
-                    <div className="flex flex-row gap-4 border-r border-gray-600 mr-16">
+                <div className="grid grid-cols-1 sm:grid-cols-3 border border-cyan-800 gap-10 text-white sm:px-12 py-8 ml-16 sm:ml-32 mr-16 sm:mr-40 mb-10">
+                    <div className="flex flex-row gap-4 border-b pb-8 pl-10 sm:pl-0 sm:pb-0 sm:border-r border-gray-600 sm:mr-16">
                         <MdWifiCalling3 className="bg-[#1288B8] text-white text-lg p-3 w-16 h-16 mt-1"></MdWifiCalling3>
                         <ul className="flex flex-col ml-3">
                             <li className="font-bold text-xl">Call us</li>
                             <li className="text-md mt-2">+1 123-456-0606</li>
                         </ul>
                     </div>
-                    <div className="flex flex-row gap-4 border-r border-gray-600 mr-16">
+                    <div className="flex flex-row gap-4 border-b pb-8 pl-10 sm:pl-0 sm:pb-0 sm:border-r border-gray-600 sm:mr-16">
                         <FaEnvelopeOpenText className="bg-[#1288B8] text-white text-lg p-3 w-16 h-16 mt-1"></FaEnvelopeOpenText>
                         <ul className="flex flex-col ml-3">
                             <li className="font-bold text-xl">Write to us</li>
                             <li className="text-md mt-2">info@turismo.com</li>
                         </ul>
                     </div>
-                    <div className="flex flex-row gap-4 ">
+                    <div className="flex flex-row gap-4 pl-10 sm:pl-0  ">
                         <FaMapLocationDot className="bg-[#1288B8] text-white text-lg p-3 w-16 h-16 mt-1"></FaMapLocationDot>
                         <ul className="flex flex-col ml-3">
                             <li className="font-bold text-xl">Address</li>
@@ -55,7 +55,7 @@ const Footer = () => {
                     </ul>
                     <div className="text-left ml-16 sm:ml-0  mt-4 sm:mt-6 md:mt-2 sm:text-left  col-span-4 sm:col-span-1">
                         <h5 className="text-2xl font-bold">Subscribe</h5>
-                        <h6 className="text-md sm:ml-5 md:ml-0 lg:ml-0 mt-2">Sign up for our monthly blogletter to stay informed about travel and tours</h6>
+                        <h6 className="text-md sm:ml-5 md:ml-0 lg:ml-0 mt-2 w-4/5 ">Sign up for our monthly blogletter to stay informed about travel and tours</h6>
                         <div className="mt-8">
                             <input className="w-1/2 py-2 rounded-lg pl-6 " type="email" placeholder="Email Address" />
                             <input className="right-7 relative outline-none bg-[#1288B8] px-4 py-2 rounded-lg" type="submit" value="Send" />
@@ -64,7 +64,7 @@ const Footer = () => {
 
                 </div>
 
-                <hr />
+                <hr className="w-4/5 mx-auto" />
                 <div>
                     <h6 className="text-center text-white py-8">© 2024 Turismo - All rights reserved</h6>
                 </div>

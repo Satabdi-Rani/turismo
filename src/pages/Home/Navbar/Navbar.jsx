@@ -10,8 +10,8 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="z-50 relative bg-transparent">
-            <div className="container mx-auto pt-6">
+        <div className="z-50 bg-transparent relative">
+            <div className="container mx-auto  pt-6">
                 <div className="navbar ">
                     <div className="navbar-start">
                         <div className="dropdown">
@@ -35,14 +35,14 @@ const Navbar = () => {
                                 {navlinks}
                             </ul>
                         </div>
-                        <a className="btn btn-ghost text-xl text-white">Turismo</a>
+                        <a href="/" className="  text-white text-bold text-3xl lg:pl-20">Turismo</a>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1 text-white  text-lg">
                             {navlinks}
                         </ul>
                     </div>
-                    <div className="navbar-end flex flex-row gap-3">
+                    <div className="navbar-end flex flex-row gap-3 lg:pr-16">
                         <Link to='/login'>
                             <button className="btn hover:bg-white text-lg hover:text-[#1288B8] bg-[#1288B8] shadow-xl text-white px-6 border-none rounded-xl py-2 ">Login</button>
                         </Link>

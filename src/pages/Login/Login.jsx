@@ -4,10 +4,19 @@ import Navbar from "../Home/Navbar/Navbar";
 import { FaGithub, FaGoogle} from "react-icons/fa";
 
 const Login = () => {
+
+    const handleLogin = event => {
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email, password);
+    }
+
     return (
         <div>
             <Navbar></Navbar>
-            <div className="hero min-h-screen z-10 mt-[-100px] h-[300px] w-full sm:h-[400px] md:h-[400px] lg:h-[1000px] pb-20 lg:w-full bg-cover bg-blend-overlay  bg-[url('https://i.ibb.co/dpt2nbf/famous-view-big-ben-houses-parliament-london-uk.jpg')]">
+            <div className="hero min-h-screen z-10 mt-[-100px] h-[300px] w-full sm:h-[400px] md:h-[400px] lg:h-[1000px] pb-20 lg:w-full bg-cover bg-blend-overlay  bg-[url('https://i.ibb.co/M9ZGBLN/aerial-shot-beautiful-natural-reserve-bonifacio-france.jpg')]">
                 <div className=" flex-col w-1/3 ">
                     <div className="card  bg- mt-24  shadow-2xl bg-gradient-to-r from-[#0F2454] to-[#1288B8]">
                         <div className="text-center pt-5">
@@ -16,7 +25,7 @@ const Login = () => {
                                 Join us in your travel history!
                             </p>
                         </div>
-                        <form className="card-body pb-10">
+                        <form onSubmit={handleLogin} className="card-body pb-10">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text text-white">Email</span>
@@ -27,7 +36,7 @@ const Login = () => {
                                 <label className="label">
                                     <span className="label-text text-white">Password</span>
                                 </label>
-                                <input type="password" placeholder="password" className="input input-bordered" required />
+                                <input type="password" placeholder="password" name="password" className="input input-bordered" required />
 
                             </div>
                             <div className="form-control mt-6">
@@ -42,7 +51,7 @@ const Login = () => {
                             </div>
                         </div>
                         {/* <hr className="w-4/5 mx-auto pb-6 mt-6 inline" /> <p className="text-white">sdbhchsd</p> */}
-                        <p className="text-white text-center pb-6">Do not have any account? Please <span className="font-bold text-yellow-400"><Link to='/login'>Register</Link></span></p>
+                        <p className="text-white text-center pb-6">Do not have any account? Please <span className="font-bold text-yellow-400"><Link to='/register'>Register</Link></span></p>
                     </div>
                 </div>
             </div>
