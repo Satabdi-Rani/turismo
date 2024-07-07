@@ -1,9 +1,12 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
+import 'react-tooltip/dist/react-tooltip.css';
+import { Tooltip } from "react-tooltip";
 
 const Navbar = () => {
     const {user, logOut} = useContext(AuthContext);
+    // console.log(user.photoURL)
 
     const handleLogout = () => {
         logOut()
@@ -16,7 +19,7 @@ const Navbar = () => {
     const navlinks = <>
         <li className="hover:text-cyan-900"><Link to='/'>Home</Link></li>
         <li><Link to='/'>All Tourists Spot</Link></li>
-        <li><Link to='/'>Add Tourists Spot</Link></li>
+        <li><Link to='/addtouristspot'>Add Tourists Spot</Link></li>
         <li><Link to='/'>My List</Link></li>
     </>
 
@@ -55,9 +58,16 @@ const Navbar = () => {
                     </div>
                     <div className="navbar-end flex flex-row gap-3 lg:pr-16">
                         {
-                            user ? <Link to=''>
+                            user ? <>
+                            <img id="clickable" className="w-10 h-10 border rounded-full" src={user.photoURL} alt="" />
+                            <Tooltip anchorSelect="#clickable" place="top">
+                                <p className="uppercase">{user.displayName}</p>
+                            </Tooltip>
+
+                            <Link to=''>
                             <button onClick={handleLogout} className="btn hover:bg-white text-lg hover:text-[#1288B8] bg-[#1288B8] shadow-xl text-white px-6 border-none rounded-xl py-2 ">LogOut</button>
                         </Link>
+                            </> 
                         : 
                         <>
                            <Link to='/login'>

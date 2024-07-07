@@ -11,7 +11,7 @@ import { FaRegEyeSlash } from "react-icons/fa6";
 
 
 const Register = () => {
-    const { createUser } = useContext(AuthContext);
+    const { createUser, updateUser } = useContext(AuthContext);
     const [success, setSuccess] = useState('');
     const [registerError, setRegisterError] = useState('');
     const [showPassword, setShowPassword] = useState(false);
@@ -103,6 +103,10 @@ const Register = () => {
                         )
 
                 )
+                updateUser({
+                    dispayName : name,
+                    photoURL: photo
+                })
                 const user = { email, name, photo };
                 fetch('http://localhost:5000/users', {
                     method: 'POST',
