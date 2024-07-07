@@ -36,7 +36,7 @@ const AddTouristSpot = () => {
                     <div className="hero min-h-screen">
                         <div className=" flex-col lg:flex-row-reverse">
 
-                            <div className="card bg-base-100  shrink-0 shadow-2xl mt-32 pt-20 ">
+                            <div className="card bg-base-100  shrink-0 shadow-2xl mt-32 pt-20 mb-32 ">
                                 <div className="text-center lg:text-left">
                                     <h1 className="text-5xl font-bold text-center">Add your favorite spot!</h1>
                                     <p className="py-6 text-center">

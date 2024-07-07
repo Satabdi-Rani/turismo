@@ -18,7 +18,7 @@ const Navbar = () => {
 
     const navlinks = <>
         <li className="hover:text-cyan-900"><Link to='/'>Home</Link></li>
-        <li><Link to='/'>All Tourists Spot</Link></li>
+        <li><Link to='/alltouristspot'>All Tourists Spot</Link></li>
         <li><Link to='/addtouristspot'>Add Tourists Spot</Link></li>
         <li><Link to='/'>My List</Link></li>
     </>
