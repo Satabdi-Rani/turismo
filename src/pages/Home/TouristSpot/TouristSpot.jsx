@@ -1,8 +1,9 @@
 import { FaLocationDot } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const TouristSpot = ({ touristSpot }) => {
     console.log(touristSpot);
-    const { country, image, locationName, tourPackage, group } = touristSpot;
+    const { country, image, locationName, tourPackage, group, _id } = touristSpot;
     return (
         <div className="">
             <div className="card  w-96 shadow-xl">
@@ -21,7 +22,10 @@ const TouristSpot = ({ touristSpot }) => {
                     <hr />
                     <p className="mt-2 font-semibold text-md mb-2">Group: {group} </p>
                     <div className="card-actions ">
-                        <button className="btn btn-primary w-full  text-lg  bg-[#1288B8] border-none text-white ">View Details</button>
+                        <Link to={`/touristspots/${_id}`}>
+                        <button  className="btn btn-primary w-full  text-lg  bg-[#1288B8] border-none text-white ">View Details</button>
+                        
+                        </Link>
                     </div>
                 </div>
             </div>

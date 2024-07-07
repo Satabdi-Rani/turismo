@@ -4,6 +4,7 @@ import Root from "../Root/Root";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import ErrorPage from "../ErrorPage/ErrorPage";
+import SingleTouristSpot from "../pages/SingleTouristSpot/SingleTouristSpot";
 
 const router = createBrowserRouter([
     {
@@ -22,6 +23,11 @@ const router = createBrowserRouter([
         {
             path: '/register',
             element: <Register></Register>
+        },
+        {
+            path: '/touristspots/:id',
+            element: <SingleTouristSpot></SingleTouristSpot>,
+            loader: ({params}) => fetch(`http://localhost:5000/touristspots/${params.id}`)
         },
       ],
     },
