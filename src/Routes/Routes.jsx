@@ -7,6 +7,7 @@ import ErrorPage from "../ErrorPage/ErrorPage";
 import SingleTouristSpot from "../pages/SingleTouristSpot/SingleTouristSpot";
 import AddTouristSpot from "../pages/AddTouristSpot/AddTouristSpot";
 import AllTouristSpot from "../pages/AllTouristSpot/AllTouristSpot";
+import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 
 const router = createBrowserRouter([
     {
@@ -28,12 +29,14 @@ const router = createBrowserRouter([
         },
         {
             path: '/touristspots/:id',
-            element: <SingleTouristSpot></SingleTouristSpot>,
+            // element: <SingleTouristSpot></SingleTouristSpot>,
+            element: <ProtectedRoute><SingleTouristSpot></SingleTouristSpot></ProtectedRoute>,
             loader: ({params}) => fetch(`http://localhost:5000/touristspots/${params.id}`)
         },
         {
            path: '/addtouristspot',
-           element: <AddTouristSpot></AddTouristSpot>
+          //  element: <AddTouristSpot></AddTouristSpot>
+           element: <ProtectedRoute><AddTouristSpot></AddTouristSpot></ProtectedRoute>
         },
         {
            path: '/alltouristspot',

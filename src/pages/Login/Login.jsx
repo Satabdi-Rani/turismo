@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import Navbar from "../Home/Navbar/Navbar";
 import { FaGithub, FaGoogle } from "react-icons/fa";
@@ -14,6 +14,7 @@ const Login = () => {
     const [success, setSuccess] = useState('');
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
+    const location = useLocation();
 
     const handleLogin = event => {
         event.preventDefault();
@@ -37,7 +38,7 @@ const Login = () => {
                         confirmButtonText: "Ok"
                     })
                 )
-                navigate('/')
+                navigate(location?.state ? location.state : '/')
             })
             .catch(error => {
                 console.log(error)
