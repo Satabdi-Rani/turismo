@@ -19,12 +19,12 @@ const Navbar = () => {
     const navlinks = <>
         <li className="hover:text-cyan-900"><Link to='/'>Home</Link></li>
         <li><Link to='/alltouristspot'>All Tourists Spot</Link></li>
-        {/* {
-            user &&  
-        } */}
+        {
+            user &&  <>        <li><Link to='/addtouristspot'>Add Tourists Spot</Link></li>
+        <li><Link to='/mylist'>My List</Link></li></>
+        }
         
-        <li><Link to='/addtouristspot'>Add Tourists Spot</Link></li>
-        <li><Link to='/mylist'>My List</Link></li>
+
     </>
 
     return (

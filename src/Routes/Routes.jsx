@@ -38,7 +38,7 @@ const router = createBrowserRouter([
         {
            path: '/addtouristspot',
           //  element: <AddTouristSpot></AddTouristSpot>
-           element: <AddTouristSpot></AddTouristSpot>
+           element: <ProtectedRoute><AddTouristSpot></AddTouristSpot></ProtectedRoute>
         },
         {
            path: '/alltouristspot',
@@ -46,7 +46,7 @@ const router = createBrowserRouter([
         },
         {
            path: '/mylist',
-           element: <MyList></MyList>
+           element: <ProtectedRoute><MyList></MyList></ProtectedRoute>
         },
         {
            path: '/updatelist/:id',
