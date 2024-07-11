@@ -35,7 +35,7 @@ const Slider = () => {
                 typeSpeed={70}
                 deleteSpeed={50}
                 delaySpeed={1000}
-                onType={2}
+                // onType={2}
                 >
                 
                     </Typewriter>  </h1>

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import Navbar from "../Home/Navbar/Navbar";
 import { useContext, useState } from "react";
@@ -15,6 +15,7 @@ const Register = () => {
     const [success, setSuccess] = useState('');
     const [registerError, setRegisterError] = useState('');
     const [showPassword, setShowPassword] = useState(false);
+    const navigate = useNavigate();
 
 
     const handleRegister = event => {
@@ -99,12 +100,13 @@ const Register = () => {
                             //     icon: "success"
                             //   })
                             // }
+                            navigate('/login')
                         }
                         )
 
                 )
                 updateUser({
-                    dispayName : name,
+                    dispayName: name,
                     photoURL: photo
                 })
                 const user = { email, name, photo };
