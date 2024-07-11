@@ -110,7 +110,7 @@ const Register = () => {
                     photoURL: photo
                 })
                 const user = { email, name, photo };
-                fetch('http://localhost:5000/users', {
+                fetch('https://turismo-server.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

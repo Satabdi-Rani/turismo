@@ -8,7 +8,7 @@ const MyList = () => {
     const { user } = useContext(AuthContext);
     const [mybookings, setMyBookings] = useState([]);
 
-    const url = `http://localhost:5000/addtouristspot?email=${user?.email}`;
+    const url = `https://turismo-server.vercel.app/addtouristspot?email=${user?.email}`;
 
     useEffect(() => {
         fetch(url)
@@ -18,7 +18,7 @@ const MyList = () => {
 
     const handleUpdate = id => {
         console.log("clicked", id)
-        fetch(`http://localhost:5000/addtouristspot/${id}`, {
+        fetch(`https://turismo-server.vercel.app/addtouristspot/${id}`, {
            method: 'PATCH',
            headers: {
             'content-type' : 'application/json'

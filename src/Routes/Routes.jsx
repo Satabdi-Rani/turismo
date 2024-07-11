@@ -33,7 +33,7 @@ const router = createBrowserRouter([
             path: '/touristspots/:id',
             // element: <SingleTouristSpot></SingleTouristSpot>,
             element: <ProtectedRoute><SingleTouristSpot></SingleTouristSpot></ProtectedRoute>,
-            loader: ({params}) => fetch(`http://localhost:5000/touristspots/${params.id}`)
+            loader: ({params}) => fetch(`https://turismo-server.vercel.app/touristspots/${params.id}`)
         },
         {
            path: '/addtouristspot',
@@ -51,7 +51,7 @@ const router = createBrowserRouter([
         {
            path: '/updatelist/:id',
            element: <UpdateList></UpdateList>,
-           loader: ({params}) => fetch(`http://localhost:5000/addtouristspot/${params.id}`)
+           loader: ({params}) => fetch(`https://turismo-server.vercel.app/addtouristspot/${params.id}`)
         },
       ],
     },
