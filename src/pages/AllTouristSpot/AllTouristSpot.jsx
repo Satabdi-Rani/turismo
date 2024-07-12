@@ -12,9 +12,9 @@ const AllTouristSpot = () => {
             .then(data => setAllToursitSpot(data))
     }, [])
     return (
-        <div className="bg-gradient-to-b from-sky-300 to-blue-500">
+        <div className="bg-gradient-to-r from-[#1288B8] to-[#0F2454]">
             <Navbar></Navbar>
-            <div className="mx-auto container mt-20 mb-20">
+            <div className="mx-auto container lg:mx-12 xl:mx-auto mt-20 mb-20">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
                     {
                         alltouristSpot.map((allspot) => <SingleTouristFromAll key={allspot._id} allspot={allspot}></SingleTouristFromAll>)

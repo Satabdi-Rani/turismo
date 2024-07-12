@@ -4,7 +4,7 @@ const SingleTouristFromAll = ({ allspot }) => {
     const { touristSpot, image, location, travelTime, totalVisitors, averageCost, season, details } = allspot;
     return (
         <div>
-            <div className="card bg-base-100 w-96 shadow-xl">
+            <div className="card bg-base-100 w-96 mx-auto sm:w-96 shadow-xl">
                 <figure>
                     <img
                         src={image}
@@ -37,7 +37,7 @@ const SingleTouristFromAll = ({ allspot }) => {
                     <p>Details: {details}</p>
                     
                     <div className="card-actions mt-4">
-                        <button className="btn btn-primary">View Details</button>
+                        <button className="btn hover:bg-[#1288B8]  hover: text-lg hover:text-white bg-[#1288B8] shadow-xl text-white px-6 border-none rounded-xl py-2 ">View Details</button>
                     </div>
                 </div>
             </div>

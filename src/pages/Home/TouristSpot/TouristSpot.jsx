@@ -6,14 +6,14 @@ const TouristSpot = ({ touristSpot }) => {
     const { country, image, locationName, tourPackage, group, _id } = touristSpot;
     return (
         <div className="">
-            <div className="card  w-96 shadow-xl">
+            <div className="card  w-96 shadow-xl ">
                 <figure>
                     <img className="h-[300px]"
                         src={image}
                         alt="Shoes" />
                 </figure>
                 <div className="card-body">
-                    <ul className="flex felx-row gap-2">
+                    <ul className="flex flex-row gap-2">
                         <li className="text-xl mt-2"><FaLocationDot /></li>
                         <li className="text-2xl font-bold">{locationName},</li>
                         <li className="text-2xl font-bold">{country}</li>

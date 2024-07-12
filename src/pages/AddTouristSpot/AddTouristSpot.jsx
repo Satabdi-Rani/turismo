@@ -31,110 +31,110 @@ const AddTouristSpot = () => {
     return (
         <div className="">
             <Navbar></Navbar>
-            <div className="mt-[-100px] h-[300px] w-full sm:h-[400px] md:h-[400px] lg:h-[1000px] pb-20 lg:w-full bg-cover bg-blend-overlay  bg-[url('https://i.ibb.co/M9ZGBLN/aerial-shot-beautiful-natural-reserve-bonifacio-france.jpg')]">
-                <div>
-                    <div className="hero min-h-screen">
-                        <div className=" flex-col lg:flex-row-reverse">
+            <div className="mt-[-100px] pt-20 h-[1500px] w-full sm:h-[400px] md:h-[1100px] lg:h-[1200px] pb-20 lg:w-full bg-cover bg-blend-overlay  bg-[url('https://i.ibb.co/M9ZGBLN/aerial-shot-beautiful-natural-reserve-bonifacio-france.jpg')]">
+                <div className="">
+                    <div className="hero min-h-screen ">
+                        <div className=" flex-col lg:flex-row-reverse ">
 
-                            <div className="card bg-base-100  shrink-0 shadow-2xl mt-32 pt-20 mb-32 ">
+                            <div className="card bg-gradient-to-r from-[#0F2454] to-[#1288B8]  shrink-0 shadow-2xl mt-12 sm:mt-32 pt-10 sm:pt-20 mb-32 ">
                                 <div className="text-center lg:text-left">
-                                    <h1 className="text-5xl font-bold text-center">Add your favorite spot!</h1>
-                                    <p className="py-6 text-center">
-                                        We are happy to serve you the best. The best place to serve with any travel place.
+                                    <h1 className="text-4xl font-bold text-center text-white px-5">Add your favorite spot!</h1>
+                                    <p className="pt-6 pb-12 text-center text-white ">
+                                        We are happy to serve you the best tourist spot ever!
                                     </p>
                                 </div>
-                                <form onSubmit={handleAddTouristSpots} className="card-body">
-                                <div className="flex flex-row gap-8">
-                                    <div className="form-control w-1/2">
+                                <form onSubmit={handleAddTouristSpots} className="px-12 ">
+                                <div className="flex flex-col sm:flex-row gap-2 sm:gap-8">
+                                    <div className="form-control w-full sm:w-1/2">
                                         <label className="label">
-                                            <span className="label-text">Name</span>
+                                            <span className="label-text text-white">Name</span>
                                         </label>
                                         <input type="text" placeholder="Name" name="name" className=" input input-bordered" required />
                                     </div>
-                                    <div className="form-control w-1/2">
+                                    <div className="form-control w-full sm:w-1/2">
                                         <label className="label">
-                                            <span className="label-text">Email</span>
+                                            <span className="label-text text-white">Email</span>
                                         </label>
                                         <input type="email" placeholder="Email" name="email" className="input input-bordered" required />
                                     </div>
                                     </div>
 
 
-                                    <div className="flex flex-row gap-8">
-                                    <div className="form-control w-1/2">
+                                    <div className="flex flex-col sm:flex-row gap-2 sm:gap-8">
+                                    <div className="form-control w-full sm:w-1/2">
                                         <label className="label">
-                                            <span className="label-text">Tourist Spot Name</span>
+                                            <span className="label-text text-white">Tourist Spot Name</span>
                                         </label>
                                         <input type="text" placeholder="Tourist Spot Name" name="touristSpot" className=" input input-bordered" required />
                                     </div>
-                                    <div className="form-control w-1/2">
+                                    <div className="form-control w-full sm:w-1/2">
                                         <label className="label">
-                                            <span className="label-text">Country Name</span>
+                                            <span className="label-text text-white">Country Name</span>
                                         </label>
                                         <input type="text" placeholder="Country Name" name="country" className="input input-bordered" required />
                                     </div>
                                     </div>
 
 
-                                    <div className="flex flex-row gap-8">
-                                    <div className="form-control w-1/2">
+                                    <div className="flex flex-col sm:flex-row gap-2 sm:gap-8">
+                                    <div className="form-control w-full sm:w-1/2">
                                         <label className="label">
-                                            <span className="label-text">Image URL</span>
+                                            <span className="label-text text-white">Image URL</span>
                                         </label>
                                         <input type="text" placeholder="Image URL" name="image" className=" input input-bordered" required />
                                     </div>
-                                    <div className="form-control w-1/2">
+                                    <div className="form-control w-full sm:w-1/2">
                                         <label className="label">
-                                            <span className="label-text">Location</span>
+                                            <span className="label-text text-white">Location</span>
                                         </label>
                                         <input type="text" placeholder="Location" name="location" className="input input-bordered" required />
                                     </div>
                                     </div>
 
 
-                                    <div className="flex flex-row gap-8">
-                                    <div className="form-control w-1/2">
+                                    <div className="flex flex-col sm:flex-row gap-2 sm:gap-8">
+                                    <div className="form-control w-full sm:w-1/2">
                                         <label className="label">
-                                            <span className="label-text">Travel Time</span>
+                                            <span className="label-text text-white">Travel Time</span>
                                         </label>
                                         <input type="text" placeholder="Exp: 7 days" name="travelTime" className=" input input-bordered" required />
                                     </div>
-                                    <div className="form-control w-1/2">
+                                    <div className="form-control w-full sm:w-1/2">
                                         <label className="label">
-                                            <span className="label-text">Total Visitors</span>
+                                            <span className="label-text text-white">Total Visitors</span>
                                         </label>
                                         <input type="text" placeholder="Exp: 10000" name="totalVisitors" className="input input-bordered" required />
                                     </div>
                                     </div>
 
 
-                                    <div className="flex flex-row gap-8">
-                                    <div className="form-control w-1/2">
+                                    <div className="flex flex-col sm:flex-row gap-2 sm:gap-8">
+                                    <div className="form-control w-full sm:w-1/2">
                                         <label className="label">
-                                            <span className="label-text">Average Cost</span>
+                                            <span className="label-text text-white">Average Cost</span>
                                         </label>
                                         <input type="text" placeholder="cost" name="averageCost" className=" input input-bordered" required />
                                     </div>
-                                    <div className="form-control w-1/2">
+                                    <div className="form-control w-full sm:w-1/2">
                                         <label className="label">
-                                            <span className="label-text">Seasonality</span>
+                                            <span className="label-text text-white">Seasonality</span>
                                         </label>
                                         <input type="text" placeholder="Exp: 10000" name="season" className="input input-bordered" required />
                                     </div>
                                     </div>
 
                                     <div className="flex flex-row gap-8">
-                                    <div className="form-control w-1/2">
+                                    <div className="form-control w-full">
                                         <label className="label">
-                                            <span className="label-text">Details</span>
+                                            <span className="label-text text-white">Details</span>
                                         </label>
                                         <input type="text" placeholder="Details" name="details" className=" input input-bordered" required />
                                     </div>
                                     </div>
 
                                     
-                                    <div className="form-control mt-6">
-                                        <button className="btn btn-primary">Add</button>
+                                    <div className="form-control mt-6 pb-12">
+                                        <button className="btn bg-gradient-to-r from-[#1288B8] to-[#0F2454] text-white border-none text-lg">Add Tourist Spot</button>
                                     </div>
                                 </form>
                             </div>

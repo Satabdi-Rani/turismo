@@ -12,9 +12,9 @@ const TouristSpots = () => {
 
     return (
         <div className="mt-32 pt-32 pb-32 bg-gray-100">
-            <div className="mx-auto container">
+            <div className="mx-14 container lg:px-28">
                 <h4 className="text-[#1288B8] text-xl mb-2">TOP DESTINATION</h4>
-                <h1 className="text-5xl font-bold ">POPULAR <span className="text-[#1288B8]">TOURIST SPOTS</span></h1>
+                <h1 className="text-3xl sm:text-5xl font-bold ">POPULAR <span className="text-[#1288B8]">TOURIST SPOTS</span></h1>
                 <div className="grid grid-cols-1 gap-16 sm:grid-cols-2 lg:grid-cols-3 mt-16">
                     {
                         touristSpots.map(touristSpot => <TouristSpot key={touristSpot._id} touristSpot={touristSpot}></TouristSpot>)

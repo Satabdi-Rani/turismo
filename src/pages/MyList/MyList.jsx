@@ -29,19 +29,19 @@ const MyList = () => {
         .then(data => {
             console.log(data)
             if(data.modifiedCount > 0){
-
+                console.log('update')
             }
         })
     }
     return (
-        <div className="bg-blue-500">
+        <div className="bg-gradient-to-t from-[#1288B8] to-[#0F2454] text-white">
             <Navbar></Navbar>
-            <div>
-                <div className="overflow-x-auto">
-                    <table className="table">
+            <div className="mt-16 pb-16">
+                <div className="sm:mx-20">
+                    <table className="table border ">
                         {/* head */}
                         <thead>
-                            <tr>
+                            <tr className="text-white text-xl text-center">
                             
                                 <th>Country</th>
                                 <th>Tourist Spot</th>
@@ -50,7 +50,7 @@ const MyList = () => {
                                 <th>Status</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody className="text-center">
                             {/* row 1 */}
                            
                             {

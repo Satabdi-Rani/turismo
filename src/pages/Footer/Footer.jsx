@@ -10,7 +10,7 @@ import { FaMapLocationDot } from "react-icons/fa6";
 const Footer = () => {
     return (
         <div className="bg-[#0F2454]">
-            <div className="mx-auto container pt-20">
+            <div className="mx-auto  container pt-20">
                 <div className="grid grid-cols-1 sm:grid-cols-3 border border-cyan-800 gap-10 text-white sm:px-12 py-8 ml-16 sm:ml-32 mr-16 sm:mr-40 mb-10">
                     <div className="flex flex-row gap-4  pb-8 pl-10 sm:pl-0 sm:pb-0 sm:border-r border-gray-600 sm:mr-16">
                         <MdWifiCalling3 className="bg-[#1288B8] text-white text-lg p-3 w-16 h-16 mt-1"></MdWifiCalling3>
@@ -35,7 +35,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="lg:mx-12 grid grid-cols-4 sm:grid-cols-2 md:grid-cols-3  gap-8 text-white pt-16 pb-12">
+                <div className="lg:pl-32 grid grid-cols-4 sm:grid-cols-2 md:grid-cols-3  gap-8 text-white pt-16 pb-12">
                     <div className="w-3/4 sm:w-[80%] mx-auto md:w-full md:ml-8 lg:ml-0 col-span-4 sm:col-span-1">
                         <h2 className="text-3xl text-white font-bold">Turismo</h2>
                         <h3 className="text-lg leading-6 pt-3">By aiming to take the quality life to an upper level with the whole amazing places, Turismo continues to serve the people of travel hunger.</h3>
